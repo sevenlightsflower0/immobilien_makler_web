@@ -1,23 +1,48 @@
-name: Deploy Flutter Web
+name: Deploy Flutter Web to GitHub Pages
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Важно для gh-pages
       
-      - uses: subosito/flutter-action@v2
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        channel: 'stable'
+        
+    - name: Install dependencies
+      run: flutter pub get
       
-      - run: flutter pub get
+    - name: Build Web
+      run: |
+        flutter clean
+        flutter build web --release --base-href "/immobilien_makler_web/"
       
-      - run: flutter build web --release --base-href "/immobilien_makler_web/"
-      
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./build/web
+    - name: Prepare files
+      run: |
+        cd build/web
+        touch .nojekyll
+        cp index.html 404.html
+        echo "Base href check:"
+        grep "base href" index.html
+        
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        # ✅ Используем GITHUB_TOKEN
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: ./build/web
+        force_orphan: true  # Очищает ветку перед деплоем
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        commit_message: 'Deploy Flutter Web: ${{ github.sha }}'
