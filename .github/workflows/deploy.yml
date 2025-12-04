@@ -27,7 +27,7 @@ jobs:
           flutter pub get
           
       - name: Build Web
-        run: flutter build web --release --base-href "/immobilien-makler-web/"
+        run: flutter build web --release --base-href "/immobilien_makler_web/"
         
       - name: Setup Pages
         run: |
