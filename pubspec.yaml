@@ -27,15 +27,19 @@ environment:
 # dependencies can be manually updated by changing the version numbers below to
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
+
 dependencies:
   flutter:
     sdk: flutter
+  google_fonts: ^6.2.1
+  url_launcher: ^6.3.0
+  carousel_slider: ^5.0.0
+  flutter_map: ^7.0.0
+  latlong2: ^0.9.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  carousel_slider: ^5.1.1
-  google_fonts: ^6.3.3
 
 dev_dependencies:
   flutter_test:
@@ -49,6 +53,7 @@ dev_dependencies:
   flutter_lints: ^6.0.0
 
 # For information on the generic Dart part of this file, see the
+# For information on the generic Dart part of this file, see theC
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
