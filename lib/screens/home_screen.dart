@@ -31,9 +31,9 @@ class HomeScreen extends StatelessWidget {
         elevation: 0,
         title: Row(
           children: [
-            Icon(Icons.home_work, color: Colors.indigo[700]),
+            Icon(Icons.home_work, color: Colors.deepPurpleAccent[700]),
             const SizedBox(width: 12),
-            Text('Immobilien SLF', style: TextStyle(color: Colors.indigo[900], fontWeight: FontWeight.bold)),
+            Text('Immobilien SLF', style: TextStyle(color: Colors.deepPurpleAccent[900], fontWeight: FontWeight.bold)),
           ],
         ),
         actions: [
@@ -85,7 +85,7 @@ class HomeScreen extends StatelessWidget {
             // Suchleiste
             Container(
               padding: const EdgeInsets.all(40),
-              color: Colors.indigo[900],
+              color: Colors.deepPurpleAccent[900],
               child: Column(
                 children: [
                   const Text('Finden Sie Ihr neues Zuhause', style: TextStyle(fontSize: 32, color: Colors.white)),

@@ -8,80 +8,154 @@ class PropertyCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return Card(
-      elevation: 6,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      elevation: 4,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
       child: InkWell(
+        borderRadius: BorderRadius.circular(12),
         onTap: () {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (_) => PropertyDetailScreen(property: property)),
           );
         },
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Stack(
-              children: [
-                ClipRRect(
-                  borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
-                  child: Image.network(property.imageUrl, height: 200, width: double.infinity, fit: BoxFit.cover),
-                ),
-                if (property.isFeatured)
-                  Positioned(
-                    top: 12,
-                    right: 12,
-                    child: Chip(backgroundColor: Colors.amber[700], label: Text('TOP-ANGEBOT', style: TextStyle(color: Colors.white))),
+        child: IntrinsicHeight(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              // Bild-Sektion
+              Flexible(
+                flex: 2,
+                child: ClipRRect(
+                  borderRadius: const BorderRadius.horizontal(
+                    left: Radius.circular(12),
                   ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(property.title, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                  const SizedBox(height: 8),
-                  Text('${property.price.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'), (m) => '${m[1]}.')} €',
-                      style: TextStyle(fontSize: 22, color: Colors.indigo[700], fontWeight: FontWeight.bold)),
-                  const SizedBox(height: 8),
-                  Row(
+                  child: Stack(
                     children: [
-                      Icon(Icons.location_on, size: 16, color: Colors.grey[600]),
-                      Text(property.location, style: TextStyle(color: Colors.grey[600])),
+                      SizedBox(
+                        width: double.infinity,
+                        child: Image.network(
+                          property.imageUrl,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      if (property.isFeatured)
+                        Positioned(
+                          top: 8,
+                          left: 8,
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 6,
+                              vertical: 2,
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.amber[700],
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            child: const Text(
+                              'TOP',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
                     ],
                   ),
-                  const SizedBox(height: 8),
-                  Row(
+                ),
+              ),
+              // Inhalt-Sektion
+              Flexible(
+                flex: 3,
+                child: Padding(
+                  padding: const EdgeInsets.all(12),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      _InfoChip(Icons.king_bed, '${property.bedrooms} SZ'),
-                      _InfoChip(Icons.bathtub, '${property.bathrooms} Bad'),
-                      _InfoChip(Icons.square_foot, '${property.area} m²'),
+                      // Titel
+                      Text(
+                        property.title,
+                        style: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      // Preis
+                      Text(
+                        _formatPrice(property.price),
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.deepPurple[700],
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      // Ort
+                      Row(
+                        children: [
+                          Icon(Icons.location_on, size: 14, color: Colors.grey[600]),
+                          const SizedBox(width: 4),
+                          Expanded(
+                            child: Text(
+                              property.location,
+                              style: TextStyle(
+                                color: Colors.grey[600],
+                                fontSize: 14,
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                        ],
+                      ),
+                      // Features
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          _FeatureIcon(Icons.king_bed, property.bedrooms),
+                          _FeatureIcon(Icons.bathtub, property.bathrooms),
+                          _FeatureIcon(Icons.square_foot, property.area),
+                        ],
+                      ),
                     ],
                   ),
-                ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
   }
+
+  String _formatPrice(double price) {
+    return '${price.toStringAsFixed(0).replaceAllMapped(
+      RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+      (m) => '${m[1]}.',
+    )} €';
+  }
 }
 
-class _InfoChip extends StatelessWidget {
+class _FeatureIcon extends StatelessWidget {
   final IconData icon;
-  final String label;
-  const _InfoChip(this.icon, this.label);
+  final dynamic value;
+  const _FeatureIcon(this.icon, this.value);
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
       children: [
-        Icon(icon, size: 18, color: Colors.indigo),
-        const SizedBox(width: 4),
-        Text(label),
+        Icon(icon, size: 20, color: Colors.deepPurpleAccent),
+        const SizedBox(height: 4),
+        Text(
+          value.toString(),
+          style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+        ),
       ],
     );
   }

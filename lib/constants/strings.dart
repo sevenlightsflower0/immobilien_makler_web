@@ -13,5 +13,5 @@ class AppStrings {
   // Kontakt
   static const String contactEmail = "info@SLF-immobilien.de";
   static const String contactPhone = "+49 89 12345678";
-  static const String companyAddress = "Musterstraße 123, 80331 München";
+  static const String companyAddress = "Musterstraße 123, 80331 Karlsruhe";
 }
