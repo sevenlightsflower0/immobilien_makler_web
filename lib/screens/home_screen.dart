@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:immobilien_makler_web/widgets/navigation_bar.dart';
+import '../widgets/navigation_bar.dart';
 import '../widgets/property_card.dart';
 import '../models/property.dart';
 

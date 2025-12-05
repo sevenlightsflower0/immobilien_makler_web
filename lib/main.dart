@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:immobilien_makler_web/screens/about_screen.dart';
-import 'package:immobilien_makler_web/screens/contact_screen.dart';
-import 'package:immobilien_makler_web/screens/properties_screen.dart';
+import 'screens/about_screen.dart';
+import 'screens/contact_screen.dart';
+import 'screens/properties_screen.dart';
 import 'screens/home_screen.dart';
+import 'constants/strings.dart';
+
 
 void main() {
   runApp(const ImmobilienMaklerApp());
@@ -15,7 +17,7 @@ class ImmobilienMaklerApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Immobilien Müller - Ihr Makler in München',
+      title: AppStrings.appTitle,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.indigo,

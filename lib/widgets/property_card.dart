@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:immobilien_makler_web/models/property.dart';
-import 'package:immobilien_makler_web/screens/property_detail_screen.dart';
+import '../models/property.dart';
+import '../screens/property_detail_screen.dart';
 
 class PropertyCard extends StatelessWidget {
   final Property property;
