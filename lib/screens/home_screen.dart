@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
       id: '1',
       title: 'Moderne Stadtvilla in Bogenhausen',
       price: 1890000,
-      location: 'München-Bogenhausen',
+      location: 'KA-Bogenhausen',
       bedrooms: 5,
       bathrooms: 3,
       area: 220,
@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             Icon(Icons.home_work, color: Colors.indigo[700]),
             const SizedBox(width: 12),
-            Text('Immobilien Müller', style: TextStyle(color: Colors.indigo[900], fontWeight: FontWeight.bold)),
+            Text('Immobilien SLF', style: TextStyle(color: Colors.indigo[900], fontWeight: FontWeight.bold)),
           ],
         ),
         actions: [
@@ -62,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                             children: [
                               Text('Ihr Traumhaus wartet bereits', style: TextStyle(fontSize: 48, color: Colors.white, fontWeight: FontWeight.bold)),
                               const SizedBox(height: 20),
-                              Text('Exklusive Immobilien in und um München', style: TextStyle(fontSize: 24, color: Colors.white)),
+                              Text('Exklusive Immobilien in und um KA', style: TextStyle(fontSize: 24, color: Colors.white)),
                               const SizedBox(height: 40),
                               ElevatedButton(
                                 onPressed: () => Navigator.pushNamed(context, '/immobilien'),

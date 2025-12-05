@@ -1,6 +1,6 @@
 # Immobilien Makler Web App 🏡
 
-Flutter Web приложение для агентства недвижимости "Immobilien Müller" в Мюнхене.
+Flutter Web приложение для агентства недвижимости "Immobilien SLF" в Мюнхене.
 
 ![Flutter](https://img.shields.io/badge/Flutter-3.22-blue)
 ![Web](https://img.shields.io/badge/Platform-Web-green)
