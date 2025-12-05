@@ -1,16 +1,56 @@
-# immobilien_makler_web
+# Immobilien Makler Web App 🏡
 
-A new Flutter project.
+Flutter Web приложение для агентства недвижимости "Immobilien Müller" в Мюнхене.
 
-## Getting Started
+![Flutter](https://img.shields.io/badge/Flutter-3.22-blue)
+![Web](https://img.shields.io/badge/Platform-Web-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-This project is a starting point for a Flutter application.
+## ✨ Особенности
 
-A few resources to get you started if this is your first Flutter project:
+- 🏠 Просмотр списка недвижимостей
+- 🔍 Фильтрация и поиск объектов
+- 📱 Адаптивный дизайн для всех устройств
+- 🌐 Многоязычная поддержка (немецкий/русский)
+- 📞 Контактная форма для связи
+- 💼 Личный кабинет агента
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🚀 Live Demo
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**[Открыть приложение](https://sevenlightsflower0.github.io/immobilien_makler_web/)**
+
+## 📸 Скриншоты
+
+![Главная страница](screenshots/home.png)
+![Список недвижимости](screenshots/properties.png)
+
+## 🛠 Технологии
+
+- **Flutter 3.22** - Фреймворк для UI
+- **Dart 3** - Язык программирования
+- **Material Design** - Дизайн система
+- **Responsive Framework** - Адаптивный дизайн
+- **GitHub Pages** - Хостинг
+
+## 📦 Установка и запуск
+
+### Предварительные требования
+- [Flutter SDK](https://flutter.dev/docs/get-started/install) (версия 3.22+)
+- Git
+- Браузер Chrome для разработки
+
+### Клонирование и запуск
+```bash
+# Клонировать репозиторий
+git clone https://github.com/sevenlightsflower0/immobilien_makler_web.git
+cd immobilien_makler_web
+
+# Установить зависимости
+flutter pub get
+
+# Запустить в браузере
+flutter run -d chrome
+
+# Для публикации в GitHub Pages 
+1. Двойной клик в Windows на deploy.bat
+2. Ausführen von GitHub Actions для данного проекта
