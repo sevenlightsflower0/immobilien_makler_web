@@ -1,5 +1,5 @@
-name: immobilien_makler_web
-description: "A new Flutter project."
+name: "Neues Zuhause finden: Reisler Immobilien machts möglich"
+description: "Entdecken Sie mit Reisler Immobilien Ihr Traumheim – durch persönliche Beratung und tiefgreifende Marktkenntnis. Kontaktieren Sie uns!"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
