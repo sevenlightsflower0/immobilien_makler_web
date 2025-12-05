@@ -80766,7 +80766,7 @@ A.A0.prototype={}
 A.M_.prototype={}
 A.IF.prototype={
 L(a){var s=null,r=A.pf(s,s,B.ti,B.iA,A.aM4().$0(),s)
-return new A.xP(new A.If(A.c([new A.rE("Moderne Stadtvilla in Bogenhausen",189e4,"M\xfcnchen-Bogenhausen",5,3,220,"https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800","Exklusive Villa mit Garten und Dachterrasse...",!0)],t.MF),s),A.ao(["/immobilien",new A.a24(),"/ueber-uns",new A.a25(),"/kontakt",new A.a26()],t.N,t.Ab),"SLF Immobilien",r,!1,s)}}
+return new A.xP(new A.If(A.c([new A.rE("Moderne Stadtvilla in Bogenhausen",189e4,"KA-Bogenhausen",5,3,220,"https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800","Exklusive Villa mit Garten und Dachterrasse...",!0)],t.MF),s),A.ao(["/immobilien",new A.a24(),"/ueber-uns",new A.a25(),"/kontakt",new A.a26()],t.N,t.Ab),"SLF Immobilien",r,!1,s)}}
 A.a24.prototype={
 $1(a){return B.KH},
 $S:515}
@@ -80784,7 +80784,7 @@ A.qD.prototype={
 L(a){var s=null
 return A.L1(A.FO(s,s,s,B.RD),B.B9,s)}}
 A.If.prototype={
-L(a){var s,r,q,p=null,o=t.E,n=A.iY(A.c([A.x6(B.E6,B.iI,p,p),B.Nd,A.cJ("Immobilien M\xfcller",p,p,p,A.eA(p,p,B.ix,p,p,p,p,p,p,p,p,p,p,p,B.bm,p,p,!0,p,p,p,p,p,p,p,p),p,p)],o),B.a9,B.a5,B.af)
+L(a){var s,r,q,p=null,o=t.E,n=A.iY(A.c([A.x6(B.E6,B.iI,p,p),B.Nd,A.cJ("Immobilien SLF",p,p,p,A.eA(p,p,B.ix,p,p,p,p,p,p,p,p,p,p,p,B.bm,p,p,!0,p,p,p,p,p,p,p,p),p,p)],o),B.a9,B.a5,B.af)
 n=A.FO(A.c([A.apW(B.RG,new A.a1t(a),p)],o),B.w,0,n)
 s=this.c
 r=A.Y(s).i("aa<1,kw>")
@@ -80800,7 +80800,7 @@ $0(){return A.ye(this.a,"/kontakt",t.X)},
 $S:0}
 A.a1u.prototype={
 $1(a){var s=null,r=t.E
-return A.j2(B.cp,A.c([A.ap9(a.w,B.lk,s,s),A.lf(s,B.I,B.BM,s,s,s,s,s),new A.cU(B.ml,A.iw(A.c([A.cJ("Ihr Traumhaus wartet bereits",s,s,s,A.eA(s,s,B.k,s,s,s,s,s,s,s,s,48,s,s,B.bm,s,s,!0,s,s,s,s,s,s,s,s),s,s),B.y2,A.cJ("Exklusive Immobilien in und um M\xfcnchen",s,s,s,A.eA(s,s,B.k,s,s,s,s,s,s,s,s,24,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),B.y4,A.aoT(B.RJ,new A.a1s(this.a),A.asT(s,s,B.lM,s,s,s,s,s,s,s,s,s,B.Dn,s,s,s,s,s,s,s))],r),B.bl,B.jZ,B.af),s)],r),B.O,B.Nr)},
+return A.j2(B.cp,A.c([A.ap9(a.w,B.lk,s,s),A.lf(s,B.I,B.BM,s,s,s,s,s),new A.cU(B.ml,A.iw(A.c([A.cJ("Ihr Traumhaus wartet bereits",s,s,s,A.eA(s,s,B.k,s,s,s,s,s,s,s,s,48,s,s,B.bm,s,s,!0,s,s,s,s,s,s,s,s),s,s),B.y2,A.cJ("Exklusive Immobilien in und um KA",s,s,s,A.eA(s,s,B.k,s,s,s,s,s,s,s,s,24,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),B.y4,A.aoT(B.RJ,new A.a1s(this.a),A.asT(s,s,B.lM,s,s,s,s,s,s,s,s,s,B.Dn,s,s,s,s,s,s,s))],r),B.bl,B.jZ,B.af),s)],r),B.O,B.Nr)},
 $S:518}
 A.a1s.prototype={
 $0(){return A.ye(this.a,"/immobilien",t.X)},
